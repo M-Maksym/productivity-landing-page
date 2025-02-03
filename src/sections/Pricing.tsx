@@ -1,7 +1,9 @@
 "use client";
-import CheckIcon from "@/assets/check.svg";
+
 import { twMerge } from "tailwind-merge";
 import { motion } from "framer-motion";
+
+import CheckIcon from "@/assets/check.svg";
 
 const pricingTiers = [
   {
@@ -111,7 +113,12 @@ export const Pricing = () => {
                   <span className="text-4xl font-bold tracking-tighter leading-none">
                     ${monthlyPrice}
                   </span>
-                  <span className="tracking-tight font-bold text-black/50">
+                  <span
+                    className={twMerge(
+                      "tracking-tight font-bold text-black/50",
+                      popular && "text-white/60"
+                    )}
+                  >
                     /month
                   </span>
                 </div>
